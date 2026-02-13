@@ -1,0 +1,27 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+ffi = true
+evm_version = "cancun"
+solc = "0.8.27"
+optimizer = true
+optimizer_runs = 800
+
+remappings = [
+    "@fhevm/solidity/=lib/fhevm-solidity/",
+    "encrypted-types/=lib/encrypted-types/",
+    "forge-std/=lib/forge-std/src/",
+]
+
+[profile.ci]
+fuzz = { runs = 256 }
+
+# Starter homework profile — compiles the starter/ directory
+# Usage: FOUNDRY_PROFILE=starter forge build
+#        FOUNDRY_PROFILE=starter forge test --match-contract EncryptedPollTest
+[profile.starter]
+src = "starter"
+test = "starter"
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

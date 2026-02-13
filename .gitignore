@@ -1,0 +1,30 @@
+# Compiler files
+cache/
+out/
+
+# Broadcast logs (deployment artifacts)
+broadcast/
+
+# Original bootcamp modules (adapted into website/)
+bootcamp/
+
+# Dotenv file
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Hardhat reference
+hardhat/
+
+# VitePress
+website/node_modules/
+website/.vitepress/dist/
+website/.vitepress/cache/
+
+# Video script & files
+VIDEO_SCRIPT.md
+video/
+video-assets/
