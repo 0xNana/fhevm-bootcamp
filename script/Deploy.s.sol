@@ -8,7 +8,7 @@ import {FHECounter} from "../src/FHECounter.sol";
 /// @notice Forge script to deploy the FHECounter contract.
 ///
 /// Usage:
-///   # Local (with mock FHE):
+///   # Local testing with mock FHE:
 ///   forge script script/Deploy.s.sol --rpc-url http://localhost:8545 --broadcast
 ///
 ///   # Sepolia (real FHE):
