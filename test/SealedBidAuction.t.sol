@@ -124,9 +124,7 @@ contract SealedBidAuctionTest is FhevmTest {
         vm.prank(makeAddr("lateBidder"));
         vm.expectRevert(
             abi.encodeWithSelector(
-                SealedBidAuction.WrongPhase.selector,
-                SealedBidAuction.Phase.Bidding,
-                SealedBidAuction.Phase.Closed
+                SealedBidAuction.WrongPhase.selector, SealedBidAuction.Phase.Bidding, SealedBidAuction.Phase.Closed
             )
         );
         auction.placeBid(handle, proof);

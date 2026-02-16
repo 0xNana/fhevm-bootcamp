@@ -98,12 +98,7 @@ contract ConfidentialERC20 is ZamaEthereumConfig {
     /// @param to The recipient.
     /// @param encAmount The encrypted transfer amount.
     /// @param inputProof The input proof.
-    function transferFrom(
-        address from,
-        address to,
-        externalEuint64 encAmount,
-        bytes calldata inputProof
-    ) external {
+    function transferFrom(address from, address to, externalEuint64 encAmount, bytes calldata inputProof) external {
         euint64 amount = FHE.fromExternal(encAmount, inputProof);
 
         // Check: is amount <= allowance?
